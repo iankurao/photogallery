@@ -31,6 +31,11 @@ class Category(models.Model):
     def __str__(self):
         return self.Category
 
+    @classmethod
+    def search_image(cls,search_word):
+        image=cls.objects.filter(Category__contains=search_word)
+        return image
+
     def save_category(self):
         self.save()
 
