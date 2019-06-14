@@ -33,7 +33,7 @@ class Category(models.Model):
 
     @classmethod
     def search_image(cls,search_word):
-        image=cls.objects.filter(Category__contains=search_word)
+        image=cls.objects.filter(Category__icontains=search_word)
         return image
 
     def save_category(self):
@@ -50,7 +50,14 @@ class Image(models.Model):
     upload_time=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name 
+        return self.name
+
+    
+    @classmethod
+    def get_images(cls):
+        images=cls.objects.all()
+        return images
+
 
         '''
     saving images to database
