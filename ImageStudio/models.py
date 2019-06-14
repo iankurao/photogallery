@@ -5,6 +5,12 @@ import datetime as dt
 class Location(models.Model):
     location=models.CharField(max_length=30)
 
+    @classmethod
+    def get_location(cls):
+        locations=cls.objects.all()
+        return locations
+
+
     def __str__(self):
         return self.location
 
