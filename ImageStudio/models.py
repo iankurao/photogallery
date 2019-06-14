@@ -25,6 +25,9 @@ class Category(models.Model):
     def __str__(self):
         return self.Category
 
+    def save_category(self):
+        self.save()
+
 
 
 class Image(models.Model):
@@ -37,6 +40,30 @@ class Image(models.Model):
 
     def __str__(self):
         return self.name 
+
+        '''
+    saving images to database
+    '''
+
+    def save_image(self):
+        self.save()
+
+
+    '''
+    deleting image
+    '''
+
+    def delete_image(self):
+        deleted=Image.objects.all().delete()
+        return deleted
+
+    '''
+    get image by id
+    '''
+    def get_id(self):
+        image_id=Image.objects.filter(id=1)
+        return image_id
+
 
 
 
