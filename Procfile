@@ -1,0 +1,1 @@
+web: gunicorn --chdir galleria --log-file - galleria.wsgi:application
