@@ -20,12 +20,12 @@ NO known Bugs.
 
 | Behaviour| Input | Output |
 | ------------- | ----------------- | ------------------ |
-| Display all photos on database  | "https://app-name@heroku.com"   | Loads all photos  |
+| Display all photos on database  | "https://photo-galleria@heroku.com"   | Loads all photos  |
 | Copy shortcut for images | click copy button | Saves link to clipboard |
 | Save uploaded images | Upload image | Saves image |
 | Update images as admin | update image at localhost/admin | Updates |
-| Show image details on modal | Click image | Zooms with deets |
-| Search by category| search category 'food'| returns images tagged 'culture' |
+| Show image details on modal | Click image | Zooms the Image|
+| Search by category| search category 'culture'| returns images tagged 'culture' |
 
 
 
